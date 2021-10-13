@@ -1,5 +1,4 @@
 import './Header.css';
-import 'animate.css';
 const Header = () => {
     return (
         <div className="header">
