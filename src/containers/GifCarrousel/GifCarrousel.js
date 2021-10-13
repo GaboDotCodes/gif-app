@@ -22,7 +22,13 @@ const GifCarrousel = ({ carrouselTitle, setSearches }) => {
         
         const wheelEvent = (evt) => {
             evt.preventDefault();
-            scrollContainer.scrollLeft += evt.deltaY;
+            const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+            if((scrollContainer.scrollLeft === 0 && evt.deltaY < 0) || (scrollContainer.scrollLeft === maxScrollLeft && evt.deltaY > 0)) {
+                window.scrollTo(window.scrollX,window.scrollY + evt.deltaY)
+            } else {
+                scrollContainer.scrollLeft += evt.deltaY;
+            }
         };
         
         scrollContainer.addEventListener("wheel", wheelEvent);
