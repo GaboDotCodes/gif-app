@@ -5,6 +5,8 @@ import getGifs from '../../helpers/getGifs';
 import './GifCarrousel.css'
 
 const GifCarrousel = ({ carrouselTitle, setSearches }) => {
+    
+
     const deleteSearch = () => {
         setSearches((searches) =>  searches.filter((search) => search !== carrouselTitle));
     };
@@ -14,6 +16,11 @@ const GifCarrousel = ({ carrouselTitle, setSearches }) => {
             .then((images) => {
                 setImages(images);
             })
+        const scrollContainer = document.querySelector(".grid");
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
     }, [carrouselTitle]);
 
     const [images, setImages] = useState([]);
