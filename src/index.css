@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: #080705;
+    --text-color: #D7FFF1;
+    --accent-color: #FFC857;
+    --second-color: #2c2929;
+  }
