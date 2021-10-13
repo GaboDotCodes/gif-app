@@ -1,0 +1,50 @@
+.footer {
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+    
+}
+.footer-p {
+    font: bold 1.2em Helvetica;
+    width: 70%;
+    text-align: center;
+    margin-top: 10vh;
+    color: var(--main-bg-color);
+}
+
+.custom-shape-divider-top-1634069680 {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1634069680 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
+}
+
+.custom-shape-divider-top-1634069680 .shape-fill {
+    fill: var(--main-bg-color);
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--main-bg-color)
+}
+  
+a:visited {
+    text-decoration: none;
+    color: var(--main-bg-color)
+}
+
+a:hover {
+    color: var(--text-color)
+}
+
+.footer-gif{
+    height: 100px;
+}

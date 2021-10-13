@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    height: 40vh;
+}
+
+.header-gif {
+    height: 10vh;
+    margin-top: 5vh;
+}
+
+.header-title {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    color: #D7FFF1;
+    font-size: 2em;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5vw;
+    margin-top: 5vh;
+}
