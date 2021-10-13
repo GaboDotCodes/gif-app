@@ -1,0 +1,38 @@
+.gif-grid {
+    margin: 50px 0px;
+}
+
+.grid-header {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 40px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+    overflow: scroll hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+}
+
+.grid::-webkit-scrollbar {
+    display: none;
+}
+
+.grid-title {
+    color: var(--text-color);
+    margin: 0px 20px;
+    font: bold 2em Helvetica;
+}
+
+.grid img {
+    margin: 0 20px;
+    height: 300px;
+}
+
+.delete-button {
+    font: bold 1.2em Helvetica;
+    height: 1.8em;
+}
