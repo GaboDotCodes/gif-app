@@ -1,0 +1,36 @@
+.search{
+    height: 20vh;
+}
+
+.search-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.search-bar {
+    background-color: var(--second-color);
+    border: 0;
+    color: var(--text-color);
+    margin: 0 2vw;
+    font-size: 2em;
+    padding: 1vh 1vw;
+    border-radius: 0.5em;
+    border-bottom: 0px solid var(--accent-color);
+    width: 70%;
+    transition: border-bottom-width 0.2s linear;
+}
+
+.search-bar:focus {
+    outline: none;
+    transition: border-bottom-width 0.2s linear;
+    border-bottom-width: 5px;
+}
+  
+
+.search-button {
+    font: bold 2em Helvetica;
+    height: 1.5em;
+}
