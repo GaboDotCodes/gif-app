@@ -5,22 +5,30 @@ import getGifs from '../../helpers/getGifs';
 import './GifCarrousel.css'
 
 const GifCarrousel = ({ carrouselTitle, setSearches }) => {
-    
 
     const deleteSearch = () => {
         setSearches((searches) =>  searches.filter((search) => search !== carrouselTitle));
     };
 
+    
+
     useEffect(() => {
         getGifs({queryTerm: carrouselTitle})
             .then((images) => {
                 setImages(images);
-            })
+            });
+        
         const scrollContainer = document.querySelector(".grid");
-        scrollContainer.addEventListener("wheel", (evt) => {
+        
+        const wheelEvent = (evt) => {
             evt.preventDefault();
             scrollContainer.scrollLeft += evt.deltaY;
-        });
+        };
+        
+        scrollContainer.addEventListener("wheel", wheelEvent);
+        return () => {
+            scrollContainer.removeEventListener("wheel", wheelEvent);
+        }
     }, [carrouselTitle]);
 
     const [images, setImages] = useState([]);
